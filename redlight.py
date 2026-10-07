@@ -158,6 +158,16 @@ class RedLightApp(rumps.App):
             self.restore_original_gamma()
         print("RedLight terminated")
 
+def main():
+    """Main entry point for console_scripts."""
+    try:
+        app = RedLightApp()
+        app.run()
+    except KeyboardInterrupt:
+        print("\nShutting down RedLight...")
+        sys.exit(0)
+
+
 if __name__ == "__main__":
     try:
         app = RedLightApp()
